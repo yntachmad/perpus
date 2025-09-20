@@ -23,8 +23,13 @@ if (!function_exists('userNameGenerator')) {
             $username = $original_username . $count;
             $count++;
         }
-
-
         return $username;
+    }
+
+    if (!function_exists('signatureMidtrans')) {
+        function signatreMidtrans($order_id, $status_code, $gross_amount, $server_key)
+        {
+            return hash('sha512', $order_id . $status_code . $gross_amount . $server_key);
+        }
     }
 }
