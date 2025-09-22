@@ -1,22 +1,11 @@
-import { Link } from "@inertiajs/react";
-
-export default function ApplicationLogo({url = '#',size =size-9,isTitle = true}) {
+export default function ApplicationLogo({ url = '#', size = size - 9, isTitle = true }) {
     return (
-        <link
-        href = {url}
-        className = "flex items-center gap-2"
-        >
-
-            <IconsInnerShadowButtonRight
-            className = {cn(
-                'text-orange-500',
-                size
-            )}
-            />
+        <link href={url} className="flex items-center gap-2">
+            <IconsInnerShadowButtonRight className={cn('text-orange-500', size)} />
             {isTitle && (
                 <div className="flex flex-col">
                     <span className="font-bold leading-none text-foreground">Cendekia</span>
-                    <span className="text-sm font-meduim text-muted-foreground">Pengetahuan Tanpa Batas</span>
+                    <span className="font-meduim text-sm text-muted-foreground">Pengetahuan Tanpa Batas</span>
                 </div>
             )}
         </link>
@@ -41,4 +30,3 @@ export default function ApplicationLogo({url = '#',size =size-9,isTitle = true})
 //         </svg>
 //     );
 // }
-
